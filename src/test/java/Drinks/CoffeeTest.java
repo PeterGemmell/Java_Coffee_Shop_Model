@@ -26,26 +26,26 @@ public class CoffeeTest {
     }
 
     @Test
-    public void hasTypeOfBeans(){
+    public void cappuccinoHasTypeOfBeans(){
         assertEquals("Sumatra", coffee.getTypeOfBeans());
     }
 
     @Test
-    public void coffeeFillUp(){
+    public void cappuccinoFillUp(){
         assertEquals("full", coffee.fillUp());
     }
 
     @Test
-    public void hasCostPrice(){
+    public void cappuccinoHasCostPrice(){
         assertEquals(0.50, coffee.getCostPrice(), 0.01);
     }
     @Test
-    public void hasRetailPrice(){
+    public void cappuccinoHasRetailPrice(){
         assertEquals(3.50, coffee.getRetailPrice(), 0.01);
     }
 
     @Test
-    public void coffeeMarkUpPrice(){
+    public void cappuccinoMarkUpPrice(){
         assertEquals(3.00, coffee.calculateMarkup(), 0.01);
     }
 }
