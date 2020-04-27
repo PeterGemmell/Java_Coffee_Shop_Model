@@ -9,43 +9,51 @@ import static org.junit.Assert.assertEquals;
 
 public class CoffeeTest {
 
-    Coffee coffee;
+    Coffee cappuccino;
+    Coffee flatWhite;
     ISell markup;
     IWater full;
 
 
     @Before
     public void before(){
-        coffee = new Coffee("Cappuccino", "Italy", "Bold", 0.50, 3.50, "Sumatra");
+        cappuccino = new Coffee("Cappuccino", "Italy", "Bold", 0.50, 3.50, "Sumatra");
+        flatWhite = new Coffee("Flat White", "San Francisco", "Strong", 0.50, 3.50, "Robusto");
 
     }
 
     @Test
     public void getName(){
-        assertEquals("Cappuccino", coffee.getName());
+        assertEquals("Cappuccino", cappuccino.getName());
+    }
+
+    @Test
+    public void getFlatWhite(){
+       assertEquals("Flat White", flatWhite.getName());
     }
 
     @Test
     public void cappuccinoHasTypeOfBeans(){
-        assertEquals("Sumatra", coffee.getTypeOfBeans());
+        assertEquals("Sumatra", cappuccino.getTypeOfBeans());
     }
 
     @Test
     public void cappuccinoFillUp(){
-        assertEquals("full", coffee.fillUp());
+        assertEquals("full", cappuccino.fillUp());
     }
 
     @Test
     public void cappuccinoHasCostPrice(){
-        assertEquals(0.50, coffee.getCostPrice(), 0.01);
+        assertEquals(0.50, cappuccino.getCostPrice(), 0.01);
     }
     @Test
     public void cappuccinoHasRetailPrice(){
-        assertEquals(3.50, coffee.getRetailPrice(), 0.01);
+        assertEquals(3.50, cappuccino.getRetailPrice(), 0.01);
     }
 
     @Test
     public void cappuccinoMarkUpPrice(){
-        assertEquals(3.00, coffee.calculateMarkup(), 0.01);
+        assertEquals(3.00, cappuccino.calculateMarkup(), 0.01);
     }
+
 }
