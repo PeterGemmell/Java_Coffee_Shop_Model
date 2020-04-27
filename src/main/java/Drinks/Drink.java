@@ -17,6 +17,7 @@ public abstract class Drink {
         this.retailPrice = retailPrice;
     }
 
+
     public String getName() {
         return name;
     }
@@ -55,5 +56,13 @@ public abstract class Drink {
 
     public void setRetailPrice(double retailPrice) {
         this.retailPrice = retailPrice;
+    }
+
+    public double calculateMarkup(){
+        return this.retailPrice -= costPrice;
+    }
+
+    public String fillUp() {
+        return "full";
     }
 }
