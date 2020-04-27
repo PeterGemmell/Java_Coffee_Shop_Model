@@ -9,36 +9,36 @@ import static org.junit.Assert.assertEquals;
 
 public class SoftDrinkTest {
 
-    SoftDrink softDrink;
+    SoftDrink cocaCola;
     ISell markup;
 
     @Before
     public void before(){
-        softDrink = new SoftDrink("Coca Cola", "U.S.A", "Tasty", 0.50, 2.50, "Red");
+        cocaCola = new SoftDrink("Coca Cola", "U.S.A", "Tasty", 0.50, 2.50, "Red");
     }
 
     @Test
     public void getName(){
-        assertEquals("Coca Cola", softDrink.getName());
+        assertEquals("Coca Cola", cocaCola.getName());
     }
 
     @Test
     public void cocaColaHasLabelColour(){
-        assertEquals("Red", softDrink.getLabelColour());
+        assertEquals("Red", cocaCola.getLabelColour());
     }
 
     @Test
     public void cocaColaHasCostPrice(){
-        assertEquals(0.50, softDrink.getCostPrice(), 0.01);
+        assertEquals(0.50, cocaCola.getCostPrice(), 0.01);
     }
 
     @Test
     public void cocaColaHasRetailPrice(){
-        assertEquals(2.50, softDrink.getRetailPrice(), 0.01);
+        assertEquals(2.50, cocaCola.getRetailPrice(), 0.01);
     }
 
     @Test
     public void cocaColaMarkUpPrice(){
-        assertEquals(2.00, softDrink.calculateMarkup(), 0.01);
+        assertEquals(2.00, cocaCola.calculateMarkup(), 0.01);
     }
 }
